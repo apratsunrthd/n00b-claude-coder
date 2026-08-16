@@ -1,6 +1,6 @@
 # Testing a template before handing it off
 
-Before sending a template repo (e.g. `kaylie-project-template`) to the
+Before sending a template repo (e.g. `citizen-project-template`) to the
 citizen developer it's for, verify the whole flow works end to end using
 your own account. Don't skip this — it's the only way to catch a broken
 `SessionStart` hook or a bad pinned commit before they do.

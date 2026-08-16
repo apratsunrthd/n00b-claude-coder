@@ -45,6 +45,23 @@ template" on is a separate repo you build by following the recipe below
    (PRs required, no direct/force pushes) if you want history to stay clean —
    optional, since the goal here is removing friction, not enforcing process
    on someone who isn't shipping to a team.
+6. **A heads-up about GitHub App repo access.** claude.ai/code reaches GitHub
+   through a "Claude" GitHub App installation. If that's installed with
+   access limited to specific repos (rather than "All repositories"), any
+   brand-new repo — including ones made from this template — won't show up
+   when the person searches for it in claude.ai/code ("No repos match").
+   This is real friction a citizen developer will hit and won't know how to
+   read. **There's no way to fix this on their behalf programmatically** —
+   confirmed by trying: the GitHub API for managing a GitHub App
+   installation's repo access
+   (`PUT /user/installations/{id}/repositories/{id}`) requires a token
+   issued through the App's own OAuth flow, not a personal access token like
+   `gh` uses. The fix has to happen in the person's own GitHub settings, so
+   put it in front of them proactively (as a one-time "before your first
+   project" step, not just buried in troubleshooting): go to
+   [github.com/settings/installations](https://github.com/settings/installations),
+   find **Claude**, click **Configure**, switch to **All repositories**.
+   Done once, it covers every future project.
 
 ## To replicate for someone new
 

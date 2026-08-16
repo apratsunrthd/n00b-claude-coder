@@ -16,6 +16,16 @@ new repository"**. Name it something obviously temporary (e.g.
 Go to [claude.ai/code](https://claude.ai/code), connect it to the new test
 repo, and start a session.
 
+If you search for the repo and get **"No repos match,"** that's not a bug in
+the template — it means the "Claude" GitHub App is installed with access
+limited to specific repos, and your brand-new one isn't in that list yet.
+Fix it at [github.com/settings/installations](https://github.com/settings/installations)
+→ **Claude** → **Configure** → switch to **All repositories** (this is a
+one-time fix that covers every future repo too, so it's worth doing right
+now rather than per-project). This is common enough that the template's own
+README covers it up front — but you may hit it here first, on your own
+account, before the citizen developer ever does.
+
 ## 3. Watch the first minute or two
 
 The `SessionStart` hook is cloning the pinned skill fork and running its

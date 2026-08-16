@@ -62,12 +62,24 @@ template" on is a separate repo you build by following the recipe below
    [github.com/settings/installations](https://github.com/settings/installations),
    find **Claude**, click **Configure**, switch to **All repositories**.
    Done once, it covers every future project.
+7. **A `CLAUDE.md` in the template that governs how Claude talks to the
+   person, not just what they read.** A live test surfaced two gaps
+   documentation alone wouldn't have caught: Claude built a webpage but
+   never told the tester how to view it (claude.ai/code has no preview panel
+   or port-forwarding — Claude has to proactively publish a Claude Artifact
+   and hand back the link), and it asked "want a PR?" with zero explanation,
+   meaningless to someone with no git background. `CLAUDE.md` instructions
+   apply to every session against the repo, so they're a much stronger lever
+   than a README the person might skim past — use it to require
+   plain-language explanations before any git/GitHub action, and to require
+   showing (not just describing) anything visual that gets built.
 
 ## To replicate for someone new
 
 1. Copy the structure of an existing template repo (e.g.
    `citizen-project-template`): `README.md`, `.gitignore`,
-   `.claude/settings.json` (SessionStart hook).
+   `.claude/settings.json` (SessionStart hook), `CLAUDE.md` (plain-language
+   behavior instructions).
 2. Get the current commit SHA of the gstack fork you want pinned:
    `git -C ~/.claude/skills/gstack log -1 --format=%H`, and put it in the
    hook command.

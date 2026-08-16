@@ -50,6 +50,22 @@ afterward to confirm it got committed. If it's not obvious how to trigger a
 commit in that UI, just ask Claude directly to commit and push — same as a
 normal Claude Code session.
 
+While you're here, specifically check the two behaviors `CLAUDE.md` is
+supposed to enforce, don't just assume they worked:
+
+- **Did Claude show you the thing it built, not just describe it?** If you
+  asked for anything visual (a webpage, a button), it should proactively
+  publish a Claude Artifact and hand you a clickable link — this
+  environment has no preview panel or port-forwarding, so if Claude doesn't
+  do this, the person testing has no way to see their own work.
+- **Did it explain any git/GitHub action in plain language before asking?**
+  If it offers to commit, push, or open a pull request, it should say what
+  that means and why in one plain sentence — not just ask "want a PR?" and
+  assume the term is self-explanatory.
+
+If either didn't happen, that's a `CLAUDE.md` gap — tighten the instructions
+and retest, don't just note it and move on.
+
 ## 6. Clean up
 
 Delete the test repo (or keep it, if useful as a reference) so it doesn't

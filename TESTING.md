@@ -62,9 +62,18 @@ supposed to enforce, don't just assume they worked:
   If it offers to commit, push, or open a pull request, it should say what
   that means and why in one plain sentence — not just ask "want a PR?" and
   assume the term is self-explanatory.
+- **Did it actually tell you what to click, not just that it "saved"
+  something?** A plain-language explanation that reads like the save
+  already happened, with no instruction to click a specific button, is a
+  gap — the person is left unsure whether they need to do anything. It
+  should name the literal button (e.g. "Create PR").
+- **Did it ask you to verify the result before merging, rather than merging
+  immediately?** And did it explain what "merge" means at that point, not
+  before? Skipping straight from "saved" to "merged" removes the one point
+  where the person actually confirms their work still works.
 
-If either didn't happen, that's a `CLAUDE.md` gap — tighten the instructions
-and retest, don't just note it and move on.
+If any of these didn't happen, that's a `CLAUDE.md` gap — tighten the
+instructions and retest, don't just note it and move on.
 
 ## 6. Clean up
 

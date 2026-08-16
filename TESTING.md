@@ -71,6 +71,12 @@ supposed to enforce, don't just assume they worked:
   immediately?** And did it explain what "merge" means at that point, not
   before? Skipping straight from "saved" to "merged" removes the one point
   where the person actually confirms their work still works.
+- **Did it update the project's own README.md to describe what you just
+  built?** After a save that meaningfully changes what the project is or
+  does, check the repo's README — not this recipe's, the new project's own.
+  If it still just says the generic "starting a new project" onboarding
+  text with no mention of what's actually in the project now, that's a gap:
+  the README should track reality, updated as part of the same save.
 
 If any of these didn't happen, that's a `CLAUDE.md` gap — tighten the
 instructions and retest, don't just note it and move on.

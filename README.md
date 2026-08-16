@@ -73,6 +73,18 @@ template" on is a separate repo you build by following the recipe below
    than a README the person might skim past — use it to require
    plain-language explanations before any git/GitHub action, and to require
    showing (not just describing) anything visual that gets built.
+8. **The save flow has to name the literal button, and the README has to
+   keep up with the project.** Two more live-test findings: an explanation
+   that reads as "I saved this" without telling the person to actually
+   click the **Create PR** button leaves them unsure whether they need to
+   do anything — and merging immediately after, with no chance to verify
+   the result actually works, removes the one point where they'd catch a
+   problem. Separately, the person's own project README sat frozen as
+   generic onboarding text even after real work happened — nothing was
+   updating it to describe what the project actually is. `CLAUDE.md` now
+   requires a three-step save flow (propose + name the button → verify →
+   explain and do the merge) and requires updating the project's own
+   README.md as part of every save that changes what the project does.
 
 ## To replicate for someone new
 

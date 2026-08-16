@@ -85,6 +85,20 @@ template" on is a separate repo you build by following the recipe below
    requires a three-step save flow (propose + name the button → verify →
    explain and do the merge) and requires updating the project's own
    README.md as part of every save that changes what the project does.
+9. **Give them a bookmarkable link, not a page to navigate.** We looked
+   into whether claude.ai/code could go further and auto-create a repo per
+   new chat — detecting "they want to start something new" and skipping
+   the manual template step entirely. Confirmed via official docs this
+   isn't possible today: sessions always require a pre-selected existing
+   repo, there's no blank-session start state, and there's no mid-session
+   repo switching — so a human has to create the repo before Claude can do
+   anything. The closest thing to zero-friction that *is* real: GitHub's
+   `<owner>/<repo>/generate` URL skips straight to the "name your new repo"
+   form, bypassing the repo's page and the "Use this template" dropdown
+   entirely (verified via `curl -I`: an unauthenticated request preserves
+   `/generate` through the login redirect rather than 404ing, confirming
+   it's a real route). Give them that link to bookmark, not the repo's
+   normal GitHub page.
 
 ## To replicate for someone new
 
@@ -101,5 +115,7 @@ template" on is a separate repo you build by following the recipe below
    [TESTING.md](TESTING.md) for the full walkthrough — at minimum, run the
    hook's exact command in an isolated `$HOME` and confirm the skills install
    cleanly, then do a real "Use this template" run on claude.ai/code yourself.
-5. Send them the repo link and the two-sentence version: click "Use this
-   template," then go to claude.ai/code and describe what you want to build.
+5. Send them the `<owner>/<repo>/generate` link (bookmarkable — see "The
+   pattern" above) rather than the repo's plain GitHub page, and the
+   two-sentence version: click the link, name your project, then go to
+   claude.ai/code and describe what you want to build.

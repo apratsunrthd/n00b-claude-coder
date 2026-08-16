@@ -7,9 +7,11 @@ your own account. Don't skip this — it's the only way to catch a broken
 
 ## 1. Create a test copy
 
-On the template repo's GitHub page, click **"Use this template" → "Create a
-new repository"**. Name it something obviously temporary (e.g.
-`<name>-test`); private is fine for a test run.
+Use the template's `<owner>/<repo>/generate` link (the same bookmarkable
+link the citizen developer would use), or from the repo's GitHub page,
+click **"Use this template" → "Create a new repository"**. Name it
+something obviously temporary (e.g. `<name>-test`); private is fine for a
+test run.
 
 ## 2. Open it in claude.ai/code
 

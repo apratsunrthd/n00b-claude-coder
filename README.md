@@ -48,7 +48,9 @@ the next person.
    hook command.
 3. `gh repo create <name> --public --source=. --push`, then
    `gh api repos/<owner>/<name> -X PATCH -f is_template=true`.
-4. Test the hook end-to-end before handing it off — run its exact command in
-   an isolated `$HOME` and confirm gstack installs cleanly.
+4. Test the hook end-to-end before handing it off. See
+   [TESTING.md](TESTING.md) for the full walkthrough — at minimum, run the
+   hook's exact command in an isolated `$HOME` and confirm the skills install
+   cleanly, then do a real "Use this template" run on claude.ai/code yourself.
 5. Send them the repo link and the two-sentence version: click "Use this
    template," then go to claude.ai/code and describe what you want to build.

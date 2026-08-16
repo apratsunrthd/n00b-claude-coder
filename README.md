@@ -5,7 +5,7 @@ building real software without a formal engineering background — the same
 core workflow used here: building real files with Claude, backed by real
 version control, without exposing them to VS Code or raw GitHub.
 
-The working example is [`apratsunrthd/kaylie-project-template`](https://github.com/apratsunrthd/kaylie-project-template),
+The working example is [`apratsunrthd/citizen-project-template`](https://github.com/apratsunrthd/citizen-project-template),
 built for one specific collaborator. This doc is the general recipe, so it
 can be repeated for the next person — nothing about the pattern below is
 specific to that first example.
@@ -13,7 +13,7 @@ specific to that first example.
 **Note:** this repo (`n00b-claude-coder`) is not itself a template — it's the
 write-up of the pattern. The thing someone actually clicks "Use this
 template" on is a separate repo you build by following the recipe below
-(e.g. `kaylie-project-template`).
+(e.g. `citizen-project-template`).
 
 ## The pattern
 
@@ -49,7 +49,7 @@ template" on is a separate repo you build by following the recipe below
 ## To replicate for someone new
 
 1. Copy the structure of an existing template repo (e.g.
-   `kaylie-project-template`): `README.md`, `.gitignore`,
+   `citizen-project-template`): `README.md`, `.gitignore`,
    `.claude/settings.json` (SessionStart hook).
 2. Get the current commit SHA of the gstack fork you want pinned:
    `git -C ~/.claude/skills/gstack log -1 --format=%H`, and put it in the
